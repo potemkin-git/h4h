@@ -12,13 +12,13 @@ class MainController extends Controller
 {
 
     /**
-     * @Route("/lucky/number", name="blog_list")
+     * @Route("/", name="landing_page")
      */
     public function number(SessionInterface $session)
     {
         $number = mt_rand(0, 100);
 
-        return $this->render('number.html.twig', array(
+        return $this->render('home.html.twig', array(
             'number' => $number,
         ));
     }

@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Aufwiderzen!{% endblock %}</title>
-        {% block stylesheets %}
-            <link href="{{ asset('css/vendors/bootstrap.min.css') }}" rel="stylesheet" />
-            <link href="{{ asset('css/vendors/bootstrap-grid.min.css') }}" rel="stylesheet" />
-            <link href="{{ asset('css/vendors/bootstrap-reboot.min.css') }}" rel="stylesheet" />
-            <link href="{{ asset('css/vendors/jquery-ui.min.css') }}" rel="stylesheet" />
-            <link href="{{ asset('css/vendors/jquery-ui.structure.min.css') }}" rel="stylesheet" />
-            <link href="{{ asset('css/vendors/jquery-ui.theme.min.css') }}" rel="stylesheet" />
-        {% endblock %}
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{% block title %}Hormesis for Health{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="{{ asset('css/vendors/materialize.min.css') }}" rel="stylesheet" media="screen,projection"/>
+    <link href="{{ asset('css/vendors/jquery-ui.min.css') }}" rel="stylesheet"/>
 
-        {% block body %}{% endblock %}
+    {% block stylesheets %}
+        <link href="{{ asset('css/header.css') }}" rel="stylesheet"/>
+        <link href="{{ asset('css/footer.css') }}" rel="stylesheet"/>
+    {% endblock %}
+</head>
 
-        {% block javascripts %}
-            <script src="{{ asset('js/vendors/jquery-3.3.1.min.js') }}"></script>
-            <script src="{{ asset('js/vendors/jquery-ui.min.js') }}"></script>
-            <script src="{{ asset('js/vendors/bootstrap.bundle.min.js') }}"></script>
-            <script src="{{ asset('js/vendors/bootstrap.min.js') }}"></script>
-        {% endblock %}
-    </body>
+<body>
+
+{{ include('includes/header.html.twig') }}
+
+{% block body %}{% endblock %}
+
+{{ include('includes/footer.html.twig') }}
+
+{% block javascripts %}{% endblock %}
+    <script src="{{ asset('js/vendors/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ asset('js/vendors/jquery-ui.min.js') }}"></script>
+    <script src="{{ asset('js/vendors/materialize.min.js') }}"></script>
+</body>
 </html>
