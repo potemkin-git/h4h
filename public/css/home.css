@@ -1,0 +1,37 @@
+.tile {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /*padding: 10px;*/
+}
+
+#block1 {
+    height: 100vh;
+    overflow: hidden;
+}
+
+#block2 {
+    height: 100vh;
+    /*background-color: #00acc1;*/
+}
+
+#block3 {
+    height: 100vh;
+    /*background-color: #f1a899;*/
+}
+
+#block1content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 90px;
+    color: white;
+}
+
+#mainvideo {
+    object-fit: none;
+}
+
+
